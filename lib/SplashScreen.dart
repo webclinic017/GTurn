@@ -104,7 +104,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Duration(seconds: 2),
               () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (BuildContext context) => RegistrationScreen(),
+              builder: (BuildContext context) => HomeScreen(),
             ),
           ),
         );

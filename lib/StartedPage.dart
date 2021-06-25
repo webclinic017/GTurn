@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gturn/RegistrationScreen.dart';
 import 'package:gturn/model/RegistrationModel.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 import 'constant/Widget.dart';
 
 class StartedPage extends StatelessWidget {

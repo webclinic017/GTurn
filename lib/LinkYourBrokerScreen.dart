@@ -3,7 +3,7 @@ import 'package:flutter_dash/flutter_dash.dart';
 import 'package:gturn/ChooseYourPlanScreen.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'constant/Widget.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class LinkYourBroker extends StatefulWidget {
   @override
   _LinkYourBrokerState createState() => _LinkYourBrokerState();

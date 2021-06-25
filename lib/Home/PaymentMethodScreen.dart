@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gturn/constant/Widget.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class PaymentMethodScreen extends StatefulWidget {
   @override
   _PaymentMethodScreenState createState() => _PaymentMethodScreenState();

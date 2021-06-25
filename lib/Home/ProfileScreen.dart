@@ -7,7 +7,7 @@ import 'package:gturn/constant/ConstantClass.dart';
 import 'package:gturn/constant/Widget.dart';
 import 'package:gturn/model/ProfileModel.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class ProfileScreen extends StatefulWidget {
   @override
   _ProfileScreenState createState() => _ProfileScreenState();

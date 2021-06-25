@@ -2,16 +2,18 @@ import 'dart:convert';
 import 'dart:ui';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:gturn/HomeScreen.dart';
 import 'package:gturn/LogInScreen.dart';
 import 'package:gturn/VerificationScreen.dart';
+import 'package:gturn/constant/ApiUrl.dart';
 import 'package:gturn/model/RegistrationModel.dart';
 import 'package:gturn/popupMenu.dart';
 import 'constant/Widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 Future<Registration> futureUser;
 class RegistrationScreen extends StatefulWidget {
   @override
@@ -42,12 +44,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   bool _cObscureText = true;
 
   Future<Registration> fetchData() async {
+    EasyLoading.show(status: 'Please wait...');
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     String token = prefs.getString(auth_token);
     prefs.setString('phoneNum',_phoneNumberController.text);
 
-    final String apiUrl = "https://globytex.com/g_turns/api/app/v1/user/register";
+    final String apiUrl = ApiUrl().registration;
 
 
     Map data = {
@@ -73,6 +76,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       print(status);
       print(message);
       if(status == 'true'){
+        EasyLoading.dismiss();
         showDialog(
             context: context,
             builder: (BuildContext context) {
@@ -128,6 +132,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             });
 
       }else if(status == 'false'){
+        EasyLoading.dismiss();
         showDialog(context: context,
             builder: (BuildContext context){
               return CustomDialogBox(

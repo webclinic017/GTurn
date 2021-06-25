@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'constant/Widget.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class NegativeScenarioScreen extends StatefulWidget {
   @override
   _NegativeScenarioScreenState createState() => _NegativeScenarioScreenState();

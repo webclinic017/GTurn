@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:gturn/Home/DashboardScreen.dart';
 import 'package:gturn/HomeScreen.dart';
 import 'package:gturn/RegistrationScreen.dart';
 import 'package:gturn/VerificationScreen.dart';
+import 'package:gturn/constant/ApiUrl.dart';
 import 'package:gturn/model/loginModel.dart';
 import 'package:gturn/popupMenu.dart';
 import 'package:http/http.dart' as http;
@@ -11,7 +13,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'constant/ConstantClass.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 Future<Login> futureUser;
 class LogInScreen extends StatefulWidget {
   @override
@@ -30,12 +32,13 @@ class _LogInScreenState extends State<LogInScreen> {
 
 
   Future<Login> fetchData() async {
+    EasyLoading.show(status: 'Please wait...');
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     String token = prefs.getString(auth_token);
 
-    final String apiUrl = "https://globytex.com/g_turns/api/app/v1/user/login";
-
+  //  final String apiUrl = "https://globytex.com/g_turns/api/app/v1/user/login";
+    final String apiUrl = ApiUrl().login;
 
     Map data = {
       "email": _emailController.text,    "password": _passwordController.text,   "app_platform": "android",   "app_version": "1.0"
@@ -64,6 +67,7 @@ class _LogInScreenState extends State<LogInScreen> {
       print(status);
       print(message);
       if(status == 'true'){
+        EasyLoading.dismiss();
         prefs.setString(constantClass.userId, loginValue.data.id);
 
         Navigator.push(
@@ -74,6 +78,7 @@ class _LogInScreenState extends State<LogInScreen> {
           ),
         );
       }else if(status == 'false'){
+        EasyLoading.dismiss();
         showDialog(context: context,
             builder: (BuildContext context){
               return CustomDialogBox(

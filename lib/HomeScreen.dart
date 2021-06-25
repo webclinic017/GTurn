@@ -7,11 +7,13 @@ import 'package:gturn/FundManagementPage.dart';
 import 'package:gturn/Home/PerformanceScreen.dart';
 import 'package:gturn/Home/ProfileScreen.dart';
 import 'package:gturn/ReportsPage.dart';
+import 'package:gturn/constant/ColorComman.dart';
 import 'package:gturn/constant/Widget.dart';
 import 'Home/DashboardScreen.dart';
 import 'Home/Message/MessagesScreen.dart';
 import 'Home/MyPortfolioScreen.dart';
 import 'configuration/BottomNavigationBar.dart';
+
 
 class HomeScreen extends StatefulWidget {
   @override

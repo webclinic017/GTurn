@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import 'constant/Widget.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class ChooseYourPlanScreen extends StatefulWidget {
   @override
   _ChooseYourPlanScreenState createState() => _ChooseYourPlanScreenState();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 Text normaltext(textshow) {
   return Text(
     textshow,
@@ -116,14 +116,14 @@ InputDecoration mobiletextboxdecoration(String _hintText) {
 }
 
 String appurl = "";
-Color appcolor = HexColor("");
-Color whitecolor = Colors.white;
-Color blackcolor = Colors.black;
-Color bluecolor = Colors.blue;
-Color greycolor = Colors.grey;
-Color redcolor = HexColor("#A31B4A");
-Color yellowcolor = HexColor("#FFC400");
-Color litegrey = HexColor("#F5F5F5");
+// Color appcolor = HexColor("");
+// Color whitecolor = Colors.white;
+// Color blackcolor = Colors.black;
+// Color bluecolor = Colors.blue;
+// Color greycolor = Colors.grey;
+// Color redcolor = HexColor("#A31B4A");
+// Color yellowcolor = HexColor("#FFC400");
+// Color litegrey = HexColor("#F5F5F5");
 
 TextStyle splashHeading =
     TextStyle(fontSize: 56, fontWeight: FontWeight.bold, color: whitecolor);

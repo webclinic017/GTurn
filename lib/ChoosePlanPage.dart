@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gturn/RegistrationScreen.dart';
 import 'package:gturn/constant/Widget.dart';
 import 'package:gturn/dialogs/CustomDialogBox.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class ChoosePlanPage extends StatefulWidget {
   @override
   _ChoosePlanPageState createState() => _ChoosePlanPageState();

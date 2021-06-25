@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gturn/DematAccountPage.dart';
 import 'package:gturn/constant/Widget.dart';
+import 'package:gturn/constant/ColorComman.dart';
 class CustomDialogBox extends StatefulWidget {
 
   @override

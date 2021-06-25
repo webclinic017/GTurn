@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:gturn/constant/ApiUrl.dart';
 import 'package:gturn/model/dashboardModel.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -9,7 +11,7 @@ import 'package:gturn/constant/Widget.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../popupMenu.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 
 Future<dashboard> futureDashboard;
 class DashboardScreen extends StatefulWidget{
@@ -34,12 +36,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 
   Future<dashboard> fetchdashboardData() async {
+
+    EasyLoading.show(status: 'Please wait...');
    debugPrint("fetchdashboardData method called");
     final SharedPreferences prefs = await SharedPreferences.getInstance();
 
     String token = prefs.getString(auth_token);
 
-    final String apiUrl = "https://globytex.com/g_turns/api/app/v1/user/home_details";
+    final String apiUrl = ApiUrl().dashBoard;
 
     Map data = {
       "user_id": "24",
@@ -80,6 +84,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       // print(message);
       print(UserDetails);
       if(status == 'true'){
+        EasyLoading.dismiss();
         // List welcome_sms = dataList["welcome_sms"];
 
 
@@ -126,6 +131,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         });
 
       }else if(status == 'false'){
+        EasyLoading.dismiss();
         showDialog(context: context,
             builder: (BuildContext context){
               return CustomDialogBox(

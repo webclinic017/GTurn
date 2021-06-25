@@ -6,7 +6,7 @@ import 'package:gturn/HomeScreen.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sms_autofill/sms_autofill.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 import 'constant/Widget.dart';
 import 'constant/Widget.dart';
 

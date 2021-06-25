@@ -3,7 +3,7 @@ import 'package:flutter_sparkline/flutter_sparkline.dart';
 import 'package:gturn/Home/PaymentMethodScreen.dart';
 import 'package:gturn/constant/Widget.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:gturn/constant/ColorComman.dart';
 class MyPortfolioScreen extends StatefulWidget {
   @override
   _MyPortfolioScreenState createState() => _MyPortfolioScreenState();
