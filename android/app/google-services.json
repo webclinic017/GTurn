@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "423697914204",
+    "project_id": "gturn-50f92",
+    "storage_bucket": "gturn-50f92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423697914204:android:98a9ac51e19e4051100999",
+        "android_client_info": {
+          "package_name": "jp.jayaprakash.gturn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423697914204-cmgm2oh90egq3gnaanadfuifome591dp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jp.jayaprakash.gturn",
+            "certificate_hash": "de97fa6ad3ec784f5ea81a8dcccbf3dd0d3cb3c8"
+          }
+        },
+        {
+          "client_id": "423697914204-66ab5pvj77j72lsknc4kne17ve0klkns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHaYDsXf07v2DFyNI5jq3oRExy1tncZhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423697914204-66ab5pvj77j72lsknc4kne17ve0klkns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
